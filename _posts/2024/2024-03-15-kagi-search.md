@@ -110,6 +110,12 @@ Kagi Searchの機能を使ったユースケースの紹介をいくつか書い
 ^https://www.amazon.co.jp/([^/]+)/dp/(.*)|https://www.amazon.co.jp/dp/$2
 ```
 
+### npm docsを常に最新のバージョンにする
+
+```
+^https://docs.npmjs.com/cli/(v[^/]+)/(.*)|https://docs.npmjs.com/cli/$2
+```
+
 ### 日本の主要なブログだけを検索する
 
 次の[Lenses](https://help.kagi.com/kagi/features/lenses.html)を使って、日本のブログだけに絞り込める
