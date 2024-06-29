@@ -90,7 +90,7 @@ iOSのSafariは、macOSのSafariと接続してログやネットワークの通
 ![iOS Safari Network](https://efcl.info/wp-content/uploads/2024/06/29-1719658748.jpg)
 
 HARファイルはリクエストとレスポンスが全て保存されているファイルになります。
-ChromeのDevToolsや[Charles](https://www.charlesproxy.com/)/[Proxyman](https://proxyman.io/)などのProxyツール、[Playwright](https://playwright.dev/docs/mock#mocking-with-har-files)などのテストツールもなども読み込みに対応しています。
+ChromeのDevToolsや[Charles](https://www.charlesproxy.com/)/[Proxyman](https://proxyman.io/)などのProxyツール、[Playwright](https://playwright.dev/docs/mock#mocking-with-har-files)などのテストツールなども読み込みに対応しています。
 
 そのサイトで行った通信が全て入ってるため、Cookieなどの認証情報も全て含まれています。
 そのため、本番環境の通信内容を含むHARファイルを渡すことは避けてください。また信頼できない人へHARファイルを渡すことも避けてください。
@@ -107,13 +107,13 @@ ChromeのDevToolsや[Charles](https://www.charlesproxy.com/)/[Proxyman](https://
 
 ### Android開発者オプションを有効にする
 
-設定 > デバイス情報 > ビルド番号連打(7回)すると、開発者向けオプションが有効された旨のメッセージが表示されます。
+設定 > デバイス情報 > ビルド番号連打すると、開発者向けオプションが有効された旨のメッセージが表示されます。
 
 - [デバイスの開発者向けオプションを設定する  |  Android Studio  |  Android Developers](https://developer.android.com/studio/debug/dev-options?hl=ja)
 
 ### デバイスで USB デバッグを有効にする
 
-USBでPCを繋いでください。「USBデバッグを許可しますか？」というダイアログが出た場合は、信頼するを選択してください。
+Android端末をUSBでPCと繋ぐと「USBデバッグを許可しますか？」というダイアログが出た場合は、信頼するを選択してください。
 
 手動で対応する場合は、Androidのバージョンによって設定が異なります。
 
