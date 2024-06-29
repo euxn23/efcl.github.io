@@ -34,7 +34,7 @@ iOSのSafariは、macOSのSafariと接続してログやネットワークの通
 3. **詳細**を開く
 4. **Webインスペクタ** をONにする
 
-![iOS Settings](https://efcl.info/wp-content/uploads/2024/06/29-1719658594.png)
+<img src="https://efcl.info/wp-content/uploads/2024/06/29-1719658594.png" alt="iOS Settings" width="300" />
 
 **macOS**
 
@@ -43,6 +43,7 @@ iOSのSafariは、macOSのSafariと接続してログやネットワークの通
 3. Webデベロッパ用の機能を表示にチェックを入れる
 
 ![macOS Safari](https://efcl.info/wp-content/uploads/2024/06/29-1719658617.png)
+
 
 ### iOSのSafariとmacOSを接続してWeb Inspectorを表示する
 
