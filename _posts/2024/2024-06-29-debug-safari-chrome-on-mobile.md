@@ -34,7 +34,7 @@ iOSのSafariは、macOSのSafariと接続してログやネットワークの通
 3. **詳細**を開く
 4. **Webインスペクタ** をONにする
 
-<img src="https://efcl.info/wp-content/uploads/2024/06/29-1719658594.png" alt="iOS Settings" width="300" />
+<img src="https://efcl.info/wp-content/uploads/2024/06/29-1719658594.jpg" alt="iOS Settings" width="300" />
 
 **macOS**
 
@@ -42,7 +42,7 @@ iOSのSafariは、macOSのSafariと接続してログやネットワークの通
 2. **詳細**タブを開く
 3. Webデベロッパ用の機能を表示にチェックを入れる
 
-![macOS Safari](https://efcl.info/wp-content/uploads/2024/06/29-1719658617.png)
+![macOS Safari](https://efcl.info/wp-content/uploads/2024/06/29-1719658617.jpg)
 
 
 ### iOSのSafariとmacOSを接続してWeb Inspectorを表示する
@@ -52,7 +52,7 @@ iOSのSafariは、macOSのSafariと接続してログやネットワークの通
 2. iOSのSafariでデバッグしたいページを開く
 3. macOSのSafariの開発メニューから、Safariで開いているページを選択する
 
-![mmaOS Safari](https://efcl.info/wp-content/uploads/2024/06/29-1719658649.png)
+![mmaOS Safari](https://efcl.info/wp-content/uploads/2024/06/29-1719658649.jpg)
 
 これでmacOSのWeb InspectでiOSのSafariのデバッグでできます。
 
@@ -73,7 +73,7 @@ iOSのSafariは、macOSのSafariと接続してログやネットワークの通
 💡 コンソールログはWeb Inspectorを開いた情報じゃないと正しく取れないことがあるので、Web Inspectorを開いだ状態でリロードをしてから取得すると良いです
 </aside>
 
-![iOS Safari Console](https://efcl.info/wp-content/uploads/2024/06/29-1719658732.png)
+![iOS Safari Console](https://efcl.info/wp-content/uploads/2024/06/29-1719658732.jpg)
 
 ### ネットワークログを取る方法
 
@@ -87,7 +87,7 @@ iOSのSafariは、macOSのSafariと接続してログやネットワークの通
 </aside>
 
 
-![iOS Safari Network](https://efcl.info/wp-content/uploads/2024/06/29-1719658748.png)
+![iOS Safari Network](https://efcl.info/wp-content/uploads/2024/06/29-1719658748.jpg)
 
 HARファイルはリクエストとレスポンスが全て保存されているファイルになります。
 ChromeのDevToolsや[Charles](https://www.charlesproxy.com/)/[Proxyman](https://proxyman.io/)などのProxyツール、[Playwright](https://playwright.dev/docs/mock#mocking-with-har-files)などのテストツールもなども読み込みに対応しています。
