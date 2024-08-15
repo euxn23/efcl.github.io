@@ -10,6 +10,11 @@ tags:
 
 ---
 
+**Edit(2024-08-15):** Notion DBにチャート機能が入ったので、notion-plotlyはDeprecatedになりました。
+
+- [チャート機能でデータを視覚化し、進捗状況をNotionで直接追跡](https://www.notion.so/ja/help/guides/charts-visualize-data-track-progress-in-notion)
+
+
 Notionにはデータベースのデータをグラフとして表示する機能がありません。
 外部サービスなどを使えばグラフを埋め込むことは可能ですが、それだけのために外部にデータベースの値を渡すのは微妙です。
 
