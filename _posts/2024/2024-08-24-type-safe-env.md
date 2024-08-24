@@ -46,9 +46,42 @@ Node.js は`--env-file`フラグで`.env`ファイルを読み込むことがで
 ### 環境変数の型を定義する
 
 - [defineEnv.ts](https://github.com/azu/type-safe-env/blob/main/src/env/defineEnv.ts): 環境変数の型を定義する Utility
+
+`defineEnv`関数を次のような受け取りたい環境変数の型定義をするUtilityです。
+
+```ts
+export type BaseEnvRecord = Record<
+    string,
+    {
+        value: string | undefined;
+        required: boolean;
+        defaultValue?: string;
+    }
+>;
+export type ReturnTypeOfCreateEnv<T extends BaseEnvRecord> = {
+    // If the value is required, it should be a string, otherwise it should be a string or undefined
+    [K in keyof T]: T[K]["required"] extends true ? string : string | undefined;
+};
+/**
+ * Define environment variables and create them
+ */
+export const defineEnv = <T extends BaseEnvRecord>(envs: T): ReturnTypeOfCreateEnv<T> => {
+    const result = new Map<string, string | undefined>();
+    Object.entries(envs).forEach(([key, { value, required, defaultValue }]) => {
+        if (required && !value && !defaultValue) {
+            throw new Error(
+                `Missing required environment variable: ${key}, value: ${value === undefined ? "undefined" : `"${value}"`}`
+            );
+        }
+        result.set(key, value || defaultValue);
+    });
+    return Object.fromEntries(result) as ReturnTypeOfCreateEnv<T>;
+};
+```
+
 - [env.ts](https://github.com/azu/type-safe-env/blob/main/src/env/env.ts): アプリケーション用の環境変数を定義する
 
-`defineEnv`関数を使って環境変数の型を定義します。
+`env.ts`では、`defineEnv`関数を使ってアプリケーションで受け取りたい環境変数の型を定義します。
 
 ```ts
 import { defineEnv } from "./defineEnv";
@@ -82,12 +115,12 @@ export const env = defineEnv({
 
 このときに、Node.js なら`process.env`を使って環境変数を取得します。
 値ごとに`required`で必須かどうかの指定や、`defaultValue`でデフォルト値を指定できます。
-具体的には、`required: true` で `defaultValue`が指定されていなくて、`process.env`に値がない場合はエラーになります。
+具体的には、`required: true` で `defaultValue`が指定されていなくて、`process.env.*`の値がない場合はエラーになります。
 
 この `defineEnv`関数で定義した`env`はアプリケーションが使う環境変数をまとめたものです。
 
 次のようにアプリケーションからは`env`を import して使います。
-`defineEnv`関数で定義した環境変数を安全に使うことができます。
+`defineEnv`関数で定義した環境変数を型安全に使うことができます。
 
 ```ts
 // use env
