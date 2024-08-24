@@ -218,7 +218,7 @@ Node.js は`--env-file`フラグで`.env`ファイルを読み込むことがで
 
 Node.js の`--experimental-strip-types`はまだ実験的な機能です。
 
-ts-nodeやtsxなどを使えばい`.ts`でも書けますが、あえてTypeScriptの変換を入れるほどでもないので`env.*.js`を使っています。
+ts-nodeやtsxなどを使えば`.ts`でも書けますが、あえてTypeScriptの変換を入れるほどでもないので`env.*.js`を使っています。
 
 #### 直接`--import`フラグを使わずに`NODE_OPTIONS`を使う理由
 
