@@ -43,8 +43,8 @@ Node.js は`--env-file`フラグで`.env`ファイルを読み込むことがで
 
 ### 環境変数の型を定義する
 
-- [defineEnv.ts](./src/env/defineEnv.ts): 環境変数の型を定義する Utility
-- [env.ts](./src/env/env.ts): アプリケーション用の環境変数を定義する
+- [defineEnv.ts](https://github.com/azu/type-safe-env/blob/main/src/env/defineEnv.ts): 環境変数の型を定義する Utility
+- [env.ts](https://github.com/azu/type-safe-env/blob/main/src/env/env.ts): アプリケーション用の環境変数を定義する
 
 `defineEnv`関数を使って環境変数の型を定義します。
 
@@ -155,7 +155,7 @@ NODE_OPTIONS='--import ./env.test.js' npm test
 具体的には、次のような`tsconfig.json`を使って、`env.*.js`を型チェックしています。
 `allowJs`を有効化していますが、通常はなんでも`.js`を`tsc`では扱いたくないので、`env.*.js`だけを`includes`に指定しています
 
-```json
+```json5
 {
   "compilerOptions": {
     // ....
@@ -210,7 +210,7 @@ Node.js は`--env-file`フラグで`.env`ファイルを読み込むことがで
 
 しかし、`NODE_OPTIONS="--env-file=.env"`は許可されていません。
 
-- [Node 20.6+ `--env-file` flag in `NODE_OPTIONS` is not allowed · Issue #1096 · cypress-io/github-action](
+- [Node 20.6+ `--env-file` flag in `NODE_OPTIONS` is not allowed · Issue #1096 · cypress-io/github-action](https://github.com/cypress-io/github-action/issues/1096)
 
 #### `env.*.ts`の代わりに`env.*.js`を使う理由
 
